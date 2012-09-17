@@ -7,23 +7,23 @@ using System.Text;
 
 namespace Ntts.Data.Entities
 {
-    public class Portfolio
+    public class PortfolioStock
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        
-        [Required]        
-        public int UserId { get; set; }
-        
+
         [Required]
-        public string Name { get; set; }
+        public int PortfolioId { get; set; }
+
+        [Required]
+        public int StockId { get; set; }
 
         #region Naivgation Properties
 
-        public virtual User User { get; set; }
+        public virtual Portfolio Portfolio { get; set; }
 
-        public virtual ICollection<PortfolioStock> PortfolioStocks { get; set; }
+        public virtual Stock Stock { get; set; }
 
         #endregion
     }

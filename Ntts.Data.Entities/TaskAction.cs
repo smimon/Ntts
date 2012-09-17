@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text;
 
 namespace Ntts.Data.Entities
 {
-    public class User
+    public class TaskAction
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]        
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        
+
         [Required]
-        public string UserName { get; set; }
-        
+        public int TaskId { get; set; }
+
         [Required]
-        public string PasswordHash { get; set; }
+        public int ActionId { get; set; }
 
         #region Naivgation Properties
 
-        public virtual ICollection<Portfolio> Portfolios { get; set; }
-
         public virtual ICollection<Task> Tasks { get; set; }
 
-        public virtual ICollection<TaskActionBatch> TaskActionBatches { get; set; }
+        public virtual ICollection<Action> Actions { get; set; }
 
         #endregion
     }

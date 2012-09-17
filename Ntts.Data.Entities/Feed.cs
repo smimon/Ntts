@@ -7,23 +7,28 @@ using System.Text;
 
 namespace Ntts.Data.Entities
 {
-    public class Portfolio
+    public class Feed
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        
-        [Required]        
-        public int UserId { get; set; }
-        
+
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        public int FeedTypeId { get; set; }
+
+        [Required]
+        public string Uri { get; set; }
+
         #region Naivgation Properties
 
-        public virtual User User { get; set; }
+        public virtual FeedType FeedType { get; set; }
 
-        public virtual ICollection<PortfolioStock> PortfolioStocks { get; set; }
+        public virtual ICollection<Fact> Facts { get; set; }
+
+        public virtual ICollection<Action> Actions { get; set; }
 
         #endregion
     }

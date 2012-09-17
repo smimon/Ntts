@@ -46,8 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Action.cs" />
+    <Compile Include="ActionType.cs" />
+    <Compile Include="Fact.cs" />
+    <Compile Include="FactType.cs" />
+    <Compile Include="Feed.cs" />
+    <Compile Include="FeedType.cs" />
+    <Compile Include="Market.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Portfolio.cs" />
+    <Compile Include="PortfolioStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="StockFact.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="TaskAction.cs" />
+    <Compile Include="TaskActionBatch.cs" />
+    <Compile Include="TaskActionBatchQueue.cs" />
+    <Compile Include="TaskActionBatchQueueStatus.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
