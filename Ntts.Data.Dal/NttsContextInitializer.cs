@@ -1,17 +1,78 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
+﻿using System.Data.Entity;
 using Ntts.Data.Entities;
 
 namespace Ntts.Data.Dal
 {
-    public class NttsContextInitializer : DropCreateDatabaseIfModelChanges<NttsContext>
+    public sealed class NttsContextInitializer : DropCreateDatabaseIfModelChanges<NttsContext>
     {
         protected override void Seed(NttsContext context) {
+            AddActionTypes(context);
+            AddFactDataTypes(context);
+            AddFeedTypes(context);
+            AddTaskActionBatchQueueStatuses(context);
             int defaultUserId = AddDefaultUser(context);
-            int defaultPortfolioId = AddDefaultPortfolio(context, defaultUserId);
+        }
+
+        private void AddActionTypes(NttsContext context) {
+            context.ActionTypes.Add(new ActionType {
+                Name = "Feed"
+            });
+
+            context.ActionTypes.Add(new ActionType {
+                Name = "Plugin"
+            });
+
+            context.SaveChanges();
+        }
+
+        private void AddFactDataTypes(NttsContext context) {
+            context.FactDataTypes.Add(new FactDataType {
+                Name = "String"
+            });
+
+            context.FactDataTypes.Add(new FactDataType {
+                Name = "Integer"
+            });
+
+            context.FactDataTypes.Add(new FactDataType {
+                Name = "Decimal"
+            });
+
+            context.FactDataTypes.Add(new FactDataType {
+                Name = "Boolean"
+            });
+
+            context.FactDataTypes.Add(new FactDataType {
+                Name = "DateTime"
+            });
+
+            context.SaveChanges();
+        }
+
+        private void AddFeedTypes(NttsContext context) {
+            context.FeedTypes.Add(new FeedType {
+                Name = "Scrape"
+            });
+
+            context.SaveChanges();
+        }
+
+        private void AddTaskActionBatchQueueStatuses(NttsContext context) {
+            context.TaskActionBatchQueueStatuses.Add(new TaskActionBatchQueueStatus {
+                Name = "Queued"
+            });
+
+            context.TaskActionBatchQueueStatuses.Add(new TaskActionBatchQueueStatus {
+                Name = "In Progress"
+            });
+
+            context.TaskActionBatchQueueStatuses.Add(new TaskActionBatchQueueStatus {
+                Name = "Complete"
+            });
+
+            context.TaskActionBatchQueueStatuses.Add(new TaskActionBatchQueueStatus {
+                Name = "Error"
+            });
         }
 
         private int AddDefaultUser(NttsContext context) {
@@ -24,18 +85,6 @@ namespace Ntts.Data.Dal
             context.SaveChanges();
 
             return defaultUser.Id;
-        }
-
-        private int AddDefaultPortfolio(NttsContext context, int defaultUserId) {
-            Portfolio defaultPortfolio = new Portfolio {
-                Name = "Default Portfolio",
-                UserId = defaultUserId
-            };
-
-            context.Portfolios.Add(defaultPortfolio);
-            context.SaveChanges();
-
-            return defaultPortfolio.Id;
         }
     }
 }

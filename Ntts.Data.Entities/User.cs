@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 
 namespace Ntts.Data.Entities
 {
-    public class User
+    public class User : IdentityEntityBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]        
@@ -28,4 +26,6 @@ namespace Ntts.Data.Entities
 
         #endregion
     }
+}
+
 }

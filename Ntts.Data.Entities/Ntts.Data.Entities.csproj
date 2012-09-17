@@ -50,8 +50,9 @@
     <Compile Include="ActionType.cs" />
     <Compile Include="Fact.cs" />
     <Compile Include="FactType.cs" />
-    <Compile Include="Feed.cs" />
-    <Compile Include="FeedType.cs" />
+IdentityEntityBase.cs" />
+    <Compile Include="Fact.cs" />
+    <Compile Include="FactDataCompile Include="FeedType.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Portfolio.cs" />

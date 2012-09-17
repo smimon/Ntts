@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿sing System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-
+usin
 namespace Ntts.Data.Entities
 {
-    public class Plugin
-    {
-        [Key]
+    public class Plugin : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

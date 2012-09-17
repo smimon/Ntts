@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
 
 namespace Ntts.Data.Entities
 {
-    public class Portfolio
+    public class Portfolio : IdentityEntityBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -27,4 +24,5 @@ namespace Ntts.Data.Entities
 
         #endregion
     }
+}
 }

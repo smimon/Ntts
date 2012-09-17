@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿sing System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-
+usin
 namespace Ntts.Data.Entities
 {
-    public class FactType
-    {
-        [Key]
+    public class FactDataType : IdentityEntityBas       [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
@@ -21,5 +16,16 @@ namespace Ntts.Data.Entities
         public virtual ICollection<Fact> Facts { get; set; }
 
         #endregion
+    }
+}
+
+        public enum FactDataTypeEnum
+        {
+            String = 1,
+            Integer = 2,
+            Decimal = 3,
+            Boolean = 4,
+            DateTime = 5
+        }
     }
 }

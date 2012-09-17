@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿sing System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-
+usin
 namespace Ntts.Data.Entities
 {
-    public class ActionType
-    {
-        [Key]
+    public class ActionType : IdentityEntityBas       [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
@@ -21,5 +16,13 @@ namespace Ntts.Data.Entities
         public virtual ICollection<Action> Actions { get; set; }
 
         #endregion
+    }
+}
+
+        public enum ActionTypeEnum
+        {
+            Feed = 1,
+            Plugin = 2
+        }
     }
 }

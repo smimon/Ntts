@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿sing System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-
+usin
 namespace Ntts.Data.Entities
 {
-    public class Fact
-    {
-        [Key]
+    public class Fact : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
@@ -17,7 +12,7 @@ namespace Ntts.Data.Entities
         public string Name { get; set; }
 
         [Required]
-        public int FactTypeId { get; set; }
+        public int FactTypeId { get; set; Data}
 
         public int FeedId { get; set; }
 
@@ -25,9 +20,7 @@ namespace Ntts.Data.Entities
 
         #region Naivgation Properties
 
-        public virtual FactType FactType { get; set; }
-
-        public virtual Feed Feed { get; set; }
+        public virtual FactType FactType { get; set; }DataType FactData public virtual Feed Feed { get; set; }
 
         public virtual ICollection<StockFact> StockFacts { get; set; }
 

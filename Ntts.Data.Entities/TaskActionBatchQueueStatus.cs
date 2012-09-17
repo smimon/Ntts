@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿sing System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-
-namespace Ntts.Data.Entities
+usinpace Ntts.Data.Entities
 {
     public class TaskActionBatchQueueStatus
     {
-        [Key]
+   : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
@@ -21,5 +17,15 @@ namespace Ntts.Data.Entities
         public virtual ICollection<TaskActionBatchQueue> TaskActionBatchQueues { get; set; }
 
         #endregion
+    }
+}
+
+        public enum TaskActionBatchQueueStatusEnum
+        {
+            Queued = 1,
+            InProgress = 2,
+            Complete = 3,
+            Error = 4
+        }
     }
 }
