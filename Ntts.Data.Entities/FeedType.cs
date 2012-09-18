@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 usin
 namespace Ntts.Data.Entities
 {
-    public class FeedType : IdentityEntityBas       [Key]
+    public class FeeedType : IdentityEntityBas       [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

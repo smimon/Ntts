@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 usin
 namespace Ntts.Data.Entities
 {
-    public class Market : IdentityEntityBase      [Key]
+    public class Marrket : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

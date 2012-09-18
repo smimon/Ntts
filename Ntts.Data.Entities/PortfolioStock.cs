@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 usinpace Ntts.Data.Entities
 {
-    public class PortfolioStock
+    public class PortfoliooStock
     {
    : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

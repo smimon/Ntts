@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 usin
 namespace Ntts.Data.Entities
 {
-    public class TaskAction : IdentityEntityBase      [Key]
+    public class TasskAction : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

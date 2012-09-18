@@ -5,7 +5,7 @@ using Ntts.Data.Entities;
 
 namespace Ntts.Data.Dal
 {
-    public class EntityManager<TEntity>
+    public class EntityMManager<TEntity>
         where TEntity : IdentityEntityBase
     {
         private MethodInfo _miSet;

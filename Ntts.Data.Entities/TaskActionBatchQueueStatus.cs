@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 usinpace Ntts.Data.Entities
 {
-    public class TaskActionBatchQueueStatus
+    public class TaskActioonBatchQueueStatus
     {
    : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

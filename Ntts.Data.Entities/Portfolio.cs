@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ntts.Data.Entities
 {
-    public class Portfolio : IdentityEntityBase
+    public class Portfoolio : IdentityEntityBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

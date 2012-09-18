@@ -3,7 +3,7 @@ using Ntts.Data.Entities;
 
 namespace Ntts.Data.Dal
 {
-    public sealed class NttsContext : DbContext
+    public sealed class NttsCContext : DbContext
     {
         public DbSet<Action> Actions { get; set; }
         public DbSet<ActionType> ActionTypes { get; set; }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 usinpace Ntts.Data.Entities
 {
-    public class TaskActionBatch
+    public class TaskActioonBatch
     {
    : IdentityEntityBase      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

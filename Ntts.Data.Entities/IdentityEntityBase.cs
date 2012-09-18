@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ntts.Data.Entities
 {
-    public class IdentityEntityBase
+    public class IdenttityEntityBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

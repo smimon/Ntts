@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ntts.Data.Entities
 {
-    public class User : IdentityEntityBase
+    public class User :: IdentityEntityBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]        
