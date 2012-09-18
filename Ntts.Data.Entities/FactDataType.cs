@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 usin
 namespace Ntts.Data.Entities
 {
-    public class FacctDataType : IdentityEntityBas       [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
-        [Required]
+    public class FacFactDataType : IdentityEntityBase
+    {d]
         public string Name { get; set; }
 
         #region Naivgation Properties

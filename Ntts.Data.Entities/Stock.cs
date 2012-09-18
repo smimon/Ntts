@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 usin
 namespace Ntts.Data.Entities
 {
-    public class Stoock : IdentityEntityBase      [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
-        [Required]
+    public class StoStock : IdentityEntityBase
+    {d]
         public string Code { get; set; }
 
         [Required]

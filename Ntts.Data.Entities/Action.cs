@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Ntts.Data.Entities
 {
-    public class Actioon : IdentityEntityBase
+    public class Action : IdentityEntityBase
     {ired]
         public string Name { get; set; }
 

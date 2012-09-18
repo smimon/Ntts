@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 usin
 namespace Ntts.Data.Entities
 {
-    public class Pluugin : IdentityEntityBase      [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
-        [Required]
+    public class PluPlugin : IdentityEntityBase
+    {d]
         public string Name { get; set; }
 
         #region Naivgation Properties

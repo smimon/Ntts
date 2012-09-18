@@ -4,13 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ntts.Data.Entities
 {
-    public class User :: IdentityEntityBase
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]        
-        public int Id { get; set; }
-        
-        [Required]
+    public class User :User : IdentityEntityBase
+    {equired]
         public string UserName { get; set; }
         
         [Required]
