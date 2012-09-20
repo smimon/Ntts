@@ -17,10 +17,6 @@ namespace Ntts.Data.Entities
 
         public virtual ICollection<Task> Tasks { get; set; }
 
-        public virtual ICollection<TaskActionBatch> TaskActionBatches { get; set; }
-
-        #endregion
+        public virtual ICollectio#endregion
     }
-}
-
 }

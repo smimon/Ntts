@@ -12,9 +12,9 @@ namespace Ntts.Data.Entities
 
         public int FeedId { get; set; }
 
-        public int PluginId { get; set; }
+    ? FeedId { get; set; }
 
-        #region Naivgation Properties
+        public int?    #region Naivgation Properties
 
         public virtual ActionType ActionType { get; set; }
 

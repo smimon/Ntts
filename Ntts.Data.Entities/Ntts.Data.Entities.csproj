@@ -49,10 +49,11 @@
     <Compile Include="Action.cs" />
     <Compile Include="ActionType.cs" />
     <Compile Include="Fact.cs" />
+   Parameter    <Compile Include="Fact.cs" />
     <Compile Include="FactType.cs" />
 IdentityEntityBase.cs" />
     <Compile Include="Fact.cs" />
-    <Compile Include="FactDataCompile Include="FeedType.cs" />
+    <Compile Include="FataCompile Include="FeedType.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Portfolio.cs" />
@@ -67,7 +68,11 @@ IdentityEntityBase.cs" />
     <Compile Include="TaskActionBatchQueueStatus.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
+  <IParameter  <Compile Include="User.cs" />
+  </ItemGroup>
   <ItemGroup>
+    <None Include="App.confTaskActionIteration.cs" />
+    <Compile Include="TaskActionIterationParameterup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>

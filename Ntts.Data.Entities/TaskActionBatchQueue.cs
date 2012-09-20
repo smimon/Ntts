@@ -1,7 +1,6 @@
-﻿using System
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-usinpace Ntts.Data.Entities
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotationssinpace Ntts.Data.Entities
 {
     public class TaskActioTaskActionBatchQueue : IdentityEntityBase
     {ired]
@@ -23,6 +22,11 @@ usinpace Ntts.Data.Entities
         public virtual Action Action { get; set; }
 
         public virtual TaskActionBatchQueueStatus TaskActionBatchQueueStatus { get; set; }
+
+        #endregion
+    }
+}
+public virtual ICollection<TaskActionBatchQueueParameter> TaskActionBatchQueueParameters { get; set; }
 
         #endregion
     }

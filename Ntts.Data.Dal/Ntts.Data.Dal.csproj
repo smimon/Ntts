@@ -48,8 +48,11 @@
   <ItemGroup>
     <Compile Include="EntityManager.cs" />
     <Compile Include="NttsContext.cs" />
+    <Compile Include="NttsContInterfaces\IContextProvid/>
     <Compile Include="NttsContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItContextProvidyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -64,7 +67,7 @@
   <ItemGroup>
     <Folder Include="Interfaces\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import /" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

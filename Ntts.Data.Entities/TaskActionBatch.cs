@@ -9,10 +9,7 @@ usinpace Ntts.Data.Entities
         public int TaskId { get; set; }
 
         [Required]
-        public int UserId { get; set; }
-
-        [Required]
-        public DateTime BatchDateTime { get; set; }
+        public int UserId { get; se{ get; set; }
 
         #region Naivgation Properties
 
@@ -20,7 +17,7 @@ usinpace Ntts.Data.Entities
 
         public virtual User User { get; set; }
 
-        public virtual ICollection<TaskActionBatchQueue> TaskActionBatchQueues { get; set; }
+    e> TaskActionBatchQueues { get; set; }
 
         #endregion
     }

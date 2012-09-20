@@ -9,7 +9,7 @@ namespace Ntts.Data.Entities
         public string Name { get; set; }
 
         [Required]
-        public int FactTypeId { get; set; Data}
+        public int FactTypeId { get; set; }
 
         public int FeedId { get; set; }
 
@@ -17,7 +17,7 @@ namespace Ntts.Data.Entities
 
         #region Naivgation Properties
 
-        public virtual FactType FactType { get; set; }DataType FactData public virtual Feed Feed { get; set; }
+        public virtual FactType FactType { get; set; }DataType  public virtual Feed Feed { get; set; }
 
         public virtual ICollection<StockFact> StockFacts { get; set; }
 

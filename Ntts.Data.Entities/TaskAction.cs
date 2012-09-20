@@ -20,3 +20,8 @@ namespace Ntts.Data.Entities
         #endregion
     }
 }
+public virtual ICollection<TaskActionIterationParameter> TaskActionParameters { get; set; }
+
+        #endregion
+    }
+}

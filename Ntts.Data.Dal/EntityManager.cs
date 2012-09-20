@@ -1,50 +1,43 @@
 ﻿using System.Data.Entity;
 using System.Linq;
 using System.Reflection;
-using Ntts.Data.Entities;
+using Ntts.Data.EntDal.Interfacesusing Ntts.Data.Entities;
 
 namespace Ntts.Data.Dal
 {
     public class EntityManager<TEntity>
         where TEntity : IdentityEntityBase
     {
-        private MethodInfo _miSet;
-        
-        protected NttsContext NttsContext { get; set; }
+        private Methotected IContextProvider ContextProvider { get; set; }
 
-        public EntityManager(NttsContext nttsContext) {
-            NttsContext = nttsContext;
+        public EntityManager(IContextProvider contextProvider) {
+            ContextProvider = contextProvider;
         }
 
-        public TEntity GetById(int id) {
-            return (TEntity)GetDbSet().Find(id);
+        public TEntity GetById(DbContext context, int id) {
+            return (TEntity)context.Set(typeof(TEntity)).Find(id);            
         }
 
-        public int Add(TEntity entity) {
-            GetDbSet().Add(entity);
+        public int Add(DbContext context, TEntity entity) {
+            GetDbSet(context).Add(entity);
 
-            NttsContext.SaveChanges();
+            context.SaveChanges();
 
             return entity.Id;
         }
 
-        public void Delete(TEntity entity) {
-            GetDbSet().Remove(entity);
+        public void Delete(DbContext context, TEntity entity) {
+            GetDbSet(context).Remove(entity);
 
-            NttsContext.SaveChanges();
+            context.SaveChanges();
         }
 
-        public void Update(TEntity entity) {
-            NttsContext.SaveChanges();
+        protected DbContext GetNttsContext() {
+            return ContextProvider.GetNttsContext();
         }
 
-        private DbSet<TEntity> GetDbSet() {
-            if (_miSet == null) {
-                _miSet = typeof(DbContext).GetMethods().Single(m => m.Name.Equals("Set") && m.IsGenericMethod);
-                _miSet = _miSet.MakeGenericMethod(typeof(TEntity));
-            }
-
-            return (DbSet<TEntity>)_miSet.Invoke(NttsContext, null);
+        protected DbSet GetDbSet(DbContext context) {
+            return context.Set(typeof(TEntity));
         }
     }
 }
